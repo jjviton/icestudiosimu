@@ -1,0 +1,67 @@
+#! /usr/local/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_02d61868 .scope module, "SB_IO" "SB_IO" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INOUT 1 "PACKAGE_PIN"
+    .port_info 1 /INPUT 1 "LATCH_INPUT_VALUE"
+    .port_info 2 /INPUT 1 "CLOCK_ENABLE"
+    .port_info 3 /INPUT 1 "INPUT_CLK"
+    .port_info 4 /INPUT 1 "OUTPUT_CLK"
+    .port_info 5 /INPUT 1 "OUTPUT_ENABLE"
+    .port_info 6 /INPUT 1 "D_OUT_0"
+    .port_info 7 /INPUT 1 "D_OUT_1"
+    .port_info 8 /OUTPUT 1 "D_IN_0"
+    .port_info 9 /OUTPUT 1 "D_IN_1"
+P_02d64178 .param/str "IO_STANDARD" 0 2 16, "SB_LVCMOS";
+P_02d64198 .param/l "NEG_TRIGGER" 0 2 15, C4<0>;
+P_02d641b8 .param/l "PIN_TYPE" 0 2 13, C4<000000>;
+P_02d641d8 .param/l "PULLUP" 0 2 14, C4<0>;
+o02d666a4 .functor BUFZ 1, C4<z>; HiZ drive
+v02d619b8_0 .net "CLOCK_ENABLE", 0 0, o02d666a4;  0 drivers
+o02d666bc .functor BUFZ 1, C4<z>; HiZ drive
+v02d61a10_0 .net "D_IN_0", 0 0, o02d666bc;  0 drivers
+o02d666d4 .functor BUFZ 1, C4<z>; HiZ drive
+v02e6fbe8_0 .net "D_IN_1", 0 0, o02d666d4;  0 drivers
+o02d666ec .functor BUFZ 1, C4<z>; HiZ drive
+v02e6fc40_0 .net "D_OUT_0", 0 0, o02d666ec;  0 drivers
+o02d66704 .functor BUFZ 1, C4<z>; HiZ drive
+v02e6fc98_0 .net "D_OUT_1", 0 0, o02d66704;  0 drivers
+o02d6671c .functor BUFZ 1, C4<z>; HiZ drive
+v02e6ef88_0 .net "INPUT_CLK", 0 0, o02d6671c;  0 drivers
+o02d66734 .functor BUFZ 1, C4<z>; HiZ drive
+v02e6efe0_0 .net "LATCH_INPUT_VALUE", 0 0, o02d66734;  0 drivers
+o02d6674c .functor BUFZ 1, C4<z>; HiZ drive
+v02d966c8_0 .net "OUTPUT_CLK", 0 0, o02d6674c;  0 drivers
+o02d66764 .functor BUFZ 1, C4<z>; HiZ drive
+v02d96720_0 .net "OUTPUT_ENABLE", 0 0, o02d66764;  0 drivers
+o02d6677c .functor BUFZ 1, C4<z>; HiZ drive
+v02d96778_0 .net "PACKAGE_PIN", 0 0, o02d6677c;  0 drivers
+S_02e6fb18 .scope module, "main" "main" 3 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "v7df330"
+L_02e699d8 .functor BUFZ 1, L_02e69a20, C4<0>, C4<0>, C4<0>;
+v02d968d8_0 .net "v7df330", 0 0, L_02e699d8;  1 drivers
+v02d96930_0 .net "w0", 0 0, L_02e69a20;  1 drivers
+S_02e6f080 .scope module, "v8d7c60" "main_bit_1" 3 4, 3 9 0, S_02e6fb18;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "v608bd9"
+L_02d996b8 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_02e69a20 .functor BUFZ 1, L_02d996b8, C4<0>, C4<0>, C4<0>;
+v02d96828_0 .net "v608bd9", 0 0, L_02e69a20;  alias, 1 drivers
+v02d96880_0 .net "w0", 0 0, L_02d996b8;  1 drivers
+S_02e69908 .scope module, "v68c173" "main_bit_1_basic_code_v68c173" 3 12, 3 17 0, S_02e6f080;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "v"
+v02d967d0_0 .net "v", 0 0, L_02d996b8;  alias, 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "C:\Users\jjjimenez\.apio\packages\toolchain-iverilog\vlib\system.v";
+    "ejercicio_j3_01.v";
