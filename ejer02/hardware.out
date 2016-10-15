@@ -1,0 +1,49 @@
+#! /usr/local/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00369990 .scope module, "SB_IO" "SB_IO" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INOUT 1 "PACKAGE_PIN"
+    .port_info 1 /INPUT 1 "LATCH_INPUT_VALUE"
+    .port_info 2 /INPUT 1 "CLOCK_ENABLE"
+    .port_info 3 /INPUT 1 "INPUT_CLK"
+    .port_info 4 /INPUT 1 "OUTPUT_CLK"
+    .port_info 5 /INPUT 1 "OUTPUT_ENABLE"
+    .port_info 6 /INPUT 1 "D_OUT_0"
+    .port_info 7 /INPUT 1 "D_OUT_1"
+    .port_info 8 /OUTPUT 1 "D_IN_0"
+    .port_info 9 /OUTPUT 1 "D_IN_1"
+P_00369a60 .param/str "IO_STANDARD" 0 2 16, "SB_LVCMOS";
+P_00369a80 .param/l "NEG_TRIGGER" 0 2 15, C4<0>;
+P_00369aa0 .param/l "PIN_TYPE" 0 2 13, C4<000000>;
+P_00369ac0 .param/l "PULLUP" 0 2 14, C4<0>;
+o049321e4 .functor BUFZ 1, C4<z>; HiZ drive
+v04932188_0 .net "CLOCK_ENABLE", 0 0, o049321e4;  0 drivers
+o049321fc .functor BUFZ 1, C4<z>; HiZ drive
+v049641f0_0 .net "D_IN_0", 0 0, o049321fc;  0 drivers
+o04932214 .functor BUFZ 1, C4<z>; HiZ drive
+v04964248_0 .net "D_IN_1", 0 0, o04932214;  0 drivers
+o0493222c .functor BUFZ 1, C4<z>; HiZ drive
+v049642a0_0 .net "D_OUT_0", 0 0, o0493222c;  0 drivers
+o04932244 .functor BUFZ 1, C4<z>; HiZ drive
+v049642f8_0 .net "D_OUT_1", 0 0, o04932244;  0 drivers
+o0493225c .functor BUFZ 1, C4<z>; HiZ drive
+v04964350_0 .net "INPUT_CLK", 0 0, o0493225c;  0 drivers
+o04932274 .functor BUFZ 1, C4<z>; HiZ drive
+v049643a8_0 .net "LATCH_INPUT_VALUE", 0 0, o04932274;  0 drivers
+o0493228c .functor BUFZ 1, C4<z>; HiZ drive
+v04964400_0 .net "OUTPUT_CLK", 0 0, o0493228c;  0 drivers
+o049322a4 .functor BUFZ 1, C4<z>; HiZ drive
+v04964458_0 .net "OUTPUT_ENABLE", 0 0, o049322a4;  0 drivers
+o049322bc .functor BUFZ 1, C4<z>; HiZ drive
+v049644f8_0 .net "PACKAGE_PIN", 0 0, o049322bc;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "C:\Users\jjjimenez\.apio\packages\toolchain-iverilog\vlib\system.v";
